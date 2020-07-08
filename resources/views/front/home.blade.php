@@ -7,6 +7,17 @@
   <?php
     $ifo = \App\Info_Web::find($id="1");
   ?>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+      #map { position: absolute; top: 0; bottom: 0; width: 100%;height: 600px; }
+  </style>
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
+  <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
+      type="text/css"/>
+
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
@@ -34,14 +45,29 @@
         </div>
 
         <div class="row">
-
           <div class="col-md-12 col-lg-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sejarah</a></h4>
-              <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UeXfp8wQDDM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <p class="description"><?= $ifo->deksripsi?></p>
+              <div class="icon"><i class="bx bx-happy-heart-eyes"></i></div>
+              <h4 class="title"><a href="">Pengenalan Alat Musik di Wisata Kampung Seni </a></h4>
+              <video width="500" height="315" controls>
+                  <source src="./video/VID-20200708-WA0000.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- <iframe width="560" height="315" src="./video/VID-20200708-WA0000.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <!-- <p class="description"><?= $ifo->deksripsi?></p> -->
             </div>
+            <div class="icon-box" style="margin-left:20px;">
+              <div class="icon"><i class="bx bx-bullseye"></i></div>
+              <h4 class="title"><a href="">Suasana Wisata Kampung Seni</a></h4>
+              <video width="500" height="315" controls>
+                  <source src="./video/VID-20200707-WA0006.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- <iframe width="560" height="315" src="./video/VID-20200707-WA0006.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <!-- <p class="description"><?= $ifo->deksripsi?></p> -->
+            </div>
+
           </div>
         </div>
 
@@ -59,20 +85,7 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12">
               <div class="col-md-12 col-lg-12 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200" style="margin: 0; padding: 0;">
-                  <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
-                  <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
-                  <style>
-                      #map { position: absolute; top: 0; bottom: 0; width: 100%;height: 600px; }
-                  </style>
-                  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.js"></script>
-                  <link
-                      rel="stylesheet"
-                      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.2/mapbox-gl-directions.css"
-                      type="text/css"
-                  />
-
                   <div id="map"></div>
-
                   <script>
                       var lat = 109.5550884;
                       var long = -0.6483722;
@@ -177,16 +190,5 @@
 
   </main><!-- End #main -->
   <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-          s1.async=true;
-          s1.src='https://embed.tawk.to/5eb95ab08ee2956d73a00b79/default';
-          s1.charset='UTF-8';
-          s1.setAttribute('crossorigin','*');
-          s0.parentNode.insertBefore(s1,s0);
-      })();
-  </script>
   <!--End of Tawk.to Script-->
 @endsection

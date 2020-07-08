@@ -117,7 +117,7 @@
             <div class="form-group">
               <label for="jadwal_perjalanan">Jadwal Perjalanan</label>
               <textarea name="jadwal_perjalanan" id="jadwal_perjalanan" class="textarea" placeholder="Place some text here"
-                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{ @$pw->termcondition }}</textarea>
+                          style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{{ @$pw->jadwal_perjalanan }}</textarea>
               @if($errors->has('jadwal_perjalanan'))
                   <div class="text-danger">
                       {{ $errors->first('jadwal_perjalanan')}}
