@@ -91,7 +91,7 @@
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="{{asset('ninestars/assets/img/hero-img.svg')}}" class="img-fluid animated" alt="">
+          <img src="{{asset('data_file/1594178218cc_.jpeg')}}" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>

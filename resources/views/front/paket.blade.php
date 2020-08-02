@@ -16,7 +16,7 @@
           <a href="#about" class="btn-get-started scrollto">Get Started</a>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="{{asset('ninestars/assets/img/hero-img.svg')}}" class="img-fluid animated" alt="">
+          <img src="{{asset('data_file/1594178218cc_.jpeg')}}" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
   <main id="main">
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
-      
+
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -39,7 +39,7 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-        
+
       </div>
     </div>
     @if($errors->any())
@@ -53,8 +53,8 @@
             <h3 data-aos="fade-up">{{$pw->judul}}</h3>
             <p data-aos="fade-up" data-aos-delay="100">
               <?= $pw->deskripsi?>
-            </p>            
-            
+            </p>
+
             <br>
             <div class="row">
               <style type="text/css">
@@ -96,7 +96,7 @@
                     </p>
                 </div>
                 <div class="tab-pane fade" id="custom-content-below-gale" style="width:100%" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
-                  <?php 
+                  <?php
                     $ifo = \App\View_Galeri::where('id_tour', $pw->id_tour)->get();
                   ?>
 
@@ -160,12 +160,12 @@
               </div>
             </div>
             <form action="{{ '/cart/store' }}" method="POST" role="form">
-                 @csrf         
+                 @csrf
                 <input type="hidden" name="id" value="{{ $pw->id_tour }}">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="name">Tanggal Reservasi</label>
-                    <?php 
+                    <?php
                       $stop_date = date("Y-m-d");
                       $date = date('Y-m-d', strtotime($stop_date . ' +3 day'));
                     ?>
@@ -175,12 +175,12 @@
                     <label for="name">Jumlah Orang</label>
                     <select class="form-control" name="jml" id="jml" required>
                       @foreach ($hr as $harga)
-                        <option value="{{$harga->harga.'/'.$harga->jumlah_peserta}}">{{ $harga->jumlah_peserta }}&nbsp;Org</option>                      
+                        <option value="{{$harga->harga.'/'.$harga->jumlah_peserta}}">{{ $harga->jumlah_peserta }}&nbsp;Org</option>
                       @endforeach
                     </select>
                   </div>
                 </div>
-                <input type="submit" class="btn btn-danger span3" style='background-color: #eb5d1e;' value="Reservasi">              
+                <input type="submit" class="btn btn-danger span3" style='background-color: #eb5d1e;' value="Reservasi">
             </form>
           </div>
         </div>
