@@ -21,14 +21,14 @@ Route::get('/cart/hapus/{id}', 'CartController@hapus');
 Route::post('/cart/store2', 'CartController@store2');
 
 Route::middleware('auth')->group(function () {
-	Route::middleware(['role_user:user'])->group(function (){
+//	Route::middleware(['role_user:user'])->group(function (){
 		Route::get('/reservasi', 'ReservasiController@index')->name('reservasi');
 		Route::get('/reservasi/store', 'ReservasiController@store')->name('reservasis');
 		Route::get('/reservasi/read/{id}', 'ReservasiController@read');
-	});
+//	});
 
-	Route::middleware(['role_user:admin'])->group(function ()
-	{
+//	Route::middleware(['role_user:admin'])->group(function ()
+//	{
 		Route::get('/home', 'HomeController@index')->name('home');
 		Route::get('/admin','AdminController@index')->name('admin');
 
@@ -94,10 +94,11 @@ Route::middleware('auth')->group(function () {
 		Route::get('/tag', 'TagController@index')->name('tag');
 
 		Route::get('/user', 'UserController@index')->name('user');
-	});
+//	});
 });
 
 Auth::routes();
 Route::get('/maps', function () {
     return view('maps');
 });
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
