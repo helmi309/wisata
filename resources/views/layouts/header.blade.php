@@ -12,6 +12,7 @@
         <ul>
           <li class="{{ set_active('index')}}" style="cursor: pointer;"><a onclick="index()">Home</a></li>
           <li class="{{ set_active('info')}}" style="cursor: pointer;"><a onclick="info()">Info Wisata</a></li>
+          <li class="{{ set_active('galeri')}}" style="cursor: pointer;"><a onclick="galeri()">Galeri</a></li>
           <li class="drop-down {{ set_active('paket')}}"><a href="">Paket Wisata</a>
             <ul>
               <?php
@@ -56,4 +57,3 @@
           s0.parentNode.insertBefore(s1,s0);
       })();
   </script>
-  

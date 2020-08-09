@@ -137,6 +137,9 @@
     function info () {
       window.location="/info";
     }
+    function galeri () {
+      window.location="/galeri";
+    }
     function res () {
       window.location="/reservasi";
     }

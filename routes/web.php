@@ -14,6 +14,7 @@ Auth::routes();
 Route::get('/','WebController@index')->name('index');
 Route::get('/paket/{id}', 'WebController@paket')->name('paket');
 Route::get('/info', 'InfoController@index')->name('info');
+Route::get('/galeri', 'GaleriController@index')->name('galeri');
 Route::get('/info/read/{id}', 'InfoController@read');
 Route::get('/cart', 'CartController@index')->name('cart');
 Route::post('/cart/store', 'CartController@store');

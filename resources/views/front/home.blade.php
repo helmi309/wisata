@@ -163,7 +163,7 @@
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               @foreach($ps as $p)
-              <li data-filter=".filter-{{$p->kategori}}">{{$p->kategori}}</li>
+              <li data-filter=".filter-{{$p->id_destinasi_wisata}}">{{$p->kategori}}</li>
               @endforeach
             </ul>
           </div>
@@ -171,7 +171,7 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
           @foreach($pw as $p)
-          <div class="col-lg-4 col-md-6 portfolio-item filter-{{$p->kategori}}">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{$p->id_destinasi_wisata}}">
             <div class="portfolio-wrap">
               <img src="{{asset('data_file/'.$p->foto)}}" class="img-fluid" alt="{{$p->nama_destinasi_wisata}}">
               <div class="portfolio-links">
